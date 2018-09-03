@@ -1,23 +1,58 @@
 import { Head } from 'mdx-deck'
 
-export { default as theme } from './theme'
+export { future as theme } from 'mdx-deck/themes'
 
 <Head>
-  <title>Presentation Title</title>
+  <title>Rustで言語処理系を書くと楽しい</title>
 </Head>
 
-# Hello
+# Rustで
+# 言語処理系を
+# 書くと楽しい
 
 ---
 
-## Edit this file
+## 私
 
-To create your presentation
-
-```notes
-- Create speaker notes in fenced code blocks
-```
+- @coord_e (こーでぃ)
+- C++erだった高校生
+- Rust歴は一ヶ月ちょっと
+- https://github.com/coord-e
 
 ---
 
-<https://github.com/jxnblk/mdx-deck>
+## 元C++erから見た最高すぎるRust
+
+- `Result<T, E>`と、`?`が最高すぎる
+- 暗黙のコピーがない、この安心感が最高すぎる
+- マジでセグフォしないので最高
+- `Option`と`Result`のコンビネータが最高
+
+---
+
+# さて、
+
+---
+
+## 処理系を書いています。
+
+- C++を学んんだときも処理系書きながらだったので...
+- 探したらパーサライブラリも良さそうなのがあったので、やってみることにしました
+
+---
+
+## 構成
+
+### `rust-peg`
+- <https://github.com/kevinmehall/rust-peg>
+- PEG (Parsing Expression Grammer)で定義した文法からパーサのコードを生成してくれる
+- **`build.rs`やべえ**
+
+### `cranelift`
+- <https://github.com/CraneStation/cranelift>
+- IRから実行コード生成
+- LLVM的な
+
+---
+
+<https://github.com/coord-e/expressi>
