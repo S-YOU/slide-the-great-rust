@@ -41,18 +41,36 @@ export { future as theme } from 'mdx-deck/themes'
 
 ---
 
+---
+
+## おまけ: 作っている処理系の紹介
+
+---
+
 ## 構成
 
 ### `rust-peg`
 - <https://github.com/kevinmehall/rust-peg>
 - PEG (Parsing Expression Grammer)で定義した文法からパーサのコードを生成してくれる
-- **`build.rs`やべえ**
 
 ### `cranelift`
 - <https://github.com/CraneStation/cranelift>
 - IRから実行コード生成
-- LLVM的な
+
+---
+
+## テーマ
+
+- 全部式
+- Rustの式ベースの便利さに感動したので、いっそのこと全て式で表現する言語を作ってみようと思った
+- `;`を二項演算子として扱う
+- 両辺を評価し、右辺の値を返す
+- これで複数の式をいかにも文のように並べられる
 
 ---
 
 <https://github.com/coord-e/expressi>
+
+---
+
+# ありがとうございました
