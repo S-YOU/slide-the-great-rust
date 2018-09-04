@@ -25,7 +25,7 @@ export { future as theme } from 'mdx-deck/themes'
 
 ---
 
-## 「時間できたらRustやる」
+## 「Rust, やるつもり」
 <Appear>
   <h4>と無限に言ってRustを始めない人生を送っていた</h4>
 </Appear>
@@ -45,9 +45,11 @@ export { future as theme } from 'mdx-deck/themes'
 
 ## やったこと
 
-- The Rust Programming Languageを読んだ
-- Rustで書かれたソースを読んでみた(rapidusとか)
-- いろいろRustで書くようになった
+<Appear>
+  <li>The Rust Programming Languageを読んだ</li>
+  <li>Rustで書かれたソースを読んでみた(rapidusとか)</li>
+  <li>いろいろRustで書くようになった</li>
+</Appear>
 
 ---
 
@@ -82,14 +84,15 @@ export { future as theme } from 'mdx-deck/themes'
 
 ---
 
-## 処理系を書いています。
+## 自作言語を書いています。
 
-- C++を学んんだときも処理系書きながらだったので...
+- C++を学んんだときも自作言語を書きながらだったので...
 - 探したらパーサライブラリも良さそうなのがあったので、やってみることに
 
 ---
 
-## Rustは処理系が書きやすい
+## Rustは言語処理系が書きやすい
+(なお独断と偏見)
 
 ---
 
@@ -102,6 +105,24 @@ enum Expression {
   Add(Box<Expression>, Box<Expression>)
 }
 ```
+
+`std::variant`の悪夢...
+
+---
+
+## `Enum`と`match`
+
+```rust
+fn eval(expr) -> i64 {
+  match expr {
+    Number(n) => n,
+    Boolean(tf) => tf as i64,
+    Add(lhs, rhs) => eval(*lhs) + eval(*rhs)
+  }
+}
+```
+
+`std::visit`...
 
 ---
 
