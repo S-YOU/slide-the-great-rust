@@ -1,4 +1,4 @@
-import { Head } from 'mdx-deck'
+import { Head, Appear } from 'mdx-deck'
 
 export { future as theme } from 'mdx-deck/themes'
 
@@ -21,12 +21,60 @@ export { future as theme } from 'mdx-deck/themes'
 
 ---
 
-## 元C++erから見た最高すぎるRust
+## 最近Rustを触り始めた話
 
-- `Result<T, E>`と、`?`が最高すぎる
-- 暗黙のコピーがない、この安心感が最高すぎる
-- マジでセグフォしないので最高
-- `Option`と`Result`のコンビネータが最高
+---
+
+## 「時間できたらRustやる」
+<Appear>
+  <h4>と無限に言ってRustを始めない人生を送っていた</h4>
+</Appear>
+
+---
+
+### ところがある日
+<Appear>
+  <h2>彼女がRust本を買った</h2>
+</Appear>
+
+---
+
+## 今しかない!!
+
+---
+
+## やったこと
+
+- The Rust Programming Languageを読んだ
+- Rustで書かれたソースを読んでみた(rapidusとか)
+- いろいろRustで書くようになった
+
+---
+
+## Rustのここが好き!!
+
+- 代数的データ型とパターンマッチ!!
+- `?`!!!`?`すごい!!!
+- トレイトの用途が柔軟すぎて泣いた
+- 基本的に暗黙のコピーがない
+- セグフォしない
+- `cargo`有能スギィ!
+
+---
+
+## Rustのここにつまづく!!
+
+- モジュールが、Python/JSから来た僕から見るとちょっとわかりにくい
+- ****ライフタイム****
+- selfの借用とか...
+
+---
+
+## つまづきポイントはどうにかなる!!
+
+- いろんなRustで書かれたコードを読めばだんだんわかってくる!
+- ライフタイムはまだよくわからんけど、コンパイラはごまかせるようになってきた!
+- Twitterで聞いてみると、すごい人たちが教えてくれる!! ありがとうございます!
 
 ---
 
@@ -37,9 +85,23 @@ export { future as theme } from 'mdx-deck/themes'
 ## 処理系を書いています。
 
 - C++を学んんだときも処理系書きながらだったので...
-- 探したらパーサライブラリも良さそうなのがあったので、やってみることにしました
+- 探したらパーサライブラリも良さそうなのがあったので、やってみることに
 
 ---
+
+## Rustは処理系が書きやすい
+
+---
+
+## `Enum`と`match`
+
+```rust
+enum Expression {
+  Number(i64),
+  Boolean(bool),
+  Add(Box<Expression>, Box<Expression>)
+}
+```
 
 ---
 
