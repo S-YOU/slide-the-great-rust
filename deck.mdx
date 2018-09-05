@@ -55,12 +55,61 @@ export { future as theme } from 'mdx-deck/themes'
 
 ## Rustのここが好き!!
 
-- 代数的データ型とパターンマッチ!!
-- `?`!!!`?`すごい!!!
-- トレイトの用途が柔軟すぎて泣いた
-- 基本的に暗黙のコピーがない
-- セグフォしない
-- `cargo`有能スギィ!
+---
+
+## `Result`がすごい!!
+
+エラーは例外で返すものだと思っていた(Python脳)ので、衝撃
+
+例外がなくても案外やっていける
+
+```rust
+items.map(|v| may_fail(v))
+     .collect::<Result<Vec<_>, _>>()
+```
+
+---
+
+## `?`(Try)がすごい!!
+
+[rust-lang-nursery/failure](https://github.com/rust-lang-nursery/failure)と組み合わせると、まるで例外のようにエラー処理がスムーズにできる
+
+```rust
+fn may_fail(in: i32) -> Result<i32, Error> {
+  let mut buffer = String::new();
+  io::stdin().read_to_string(&mut buffer)?;
+  let parsed = buffer.parse()?;
+  Ok(parsed + in)
+}
+```
+
+---
+
+## 基本的に暗黙のコピーがない
+
+```rust
+struct BigStruct {
+  data: Vec<String>
+}
+
+impl BigStruct {
+  fn new() -> Self {
+    let mut inst = BigStruct {
+      data: Vec::new()
+    };
+    inst.data.push("Hello!");
+    inst
+  }
+}
+```
+
+---
+
+## あとは...
+<Appear>
+  <li>セグフォしない</li>
+  <span>最近は`unsafe`を扱いだしたのでセグフォする🤪</span>
+</Appear>
 
 ---
 
