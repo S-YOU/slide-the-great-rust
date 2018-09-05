@@ -81,16 +81,23 @@ import { CodeSurfer } from "mdx-deck-code-surfer"
 
 ## `?`(Try)がすごい!!
 
-[rust-lang-nursery/failure](https://github.com/rust-lang-nursery/failure)と組み合わせると、まるで例外のようにエラー処理がスムーズにできる
+[rust-lang-nursery/failure](https://github.com/rust-lang-nursery/failure)と組み合わせると、
 
-```rust
-fn may_fail(in: i32) -> Result<i32, Error> {
-  let mut buffer = String::new();
-  io::stdin().read_to_string(&mut buffer)?;
-  let parsed = buffer.parse()?;
-  Ok(parsed + in)
-}
-```
+まるで例外のようにエラー処理がスムーズにできる
+
+---
+
+<CodeSurfer
+  title="`?`がすごい!!"
+  code={require("!raw-loader!./try.rs")}
+  lang="rust"
+  showNumbers={false}
+  dark={false}
+  steps={[
+    { lines: [3] },
+    { lines: [4] },
+  ]}
+/>
 
 ---
 
