@@ -180,35 +180,23 @@ import { CodeSurfer } from "mdx-deck-code-surfer"
 
 ---
 
-## `Enum`と`match`
-
-ASTが、`enum`で簡単に表現できる!
-
-```rust
-enum Expression {
-  Number(i64),
-  Boolean(bool),
-  Add(Box<Expression>, Box<Expression>)
-}
-```
-
-`std::variant`の悪夢...
+<CodeSurfer
+  title="enumとmatch"
+  code={require("!raw-loader!./code/enum-ast.rs")}
+  lang="rust"
+  showNumbers={false}
+  dark={false}
+/>
 
 ---
 
-## `Enum`と`match`
-
-```rust
-fn eval(expr: Expression) -> i64 {
-  match expr {
-    Number(n) => n,
-    Boolean(tf) => tf as i64,
-    Add(lhs, rhs) => eval(*lhs) + eval(*rhs)
-  }
-}
-```
-
-`std::visit`...
+<CodeSurfer
+  title="enumとmatch"
+  code={require("!raw-loader!./code/match-ast.rs")}
+  lang="rust"
+  showNumbers={false}
+  dark={false}
+/>
 
 ---
 
