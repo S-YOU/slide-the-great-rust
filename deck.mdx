@@ -3,12 +3,10 @@ export { future as theme } from 'mdx-deck/themes'
 import { CodeSurfer } from "mdx-deck-code-surfer"
 
 <Head>
-  <title>Rustで言語処理系を書くと楽しい</title>
+  <title>Rust楽しい</title>
 </Head>
 
-# Rustで
-# 言語処理系を
-# 書くと楽しい
+# こんにちは
 
 ---
 
@@ -16,7 +14,6 @@ import { CodeSurfer } from "mdx-deck-code-surfer"
 
 - @coord_e (こーでぃ)
 - C++erだった高校生
-- Rust歴は一ヶ月ちょっと
 - https://github.com/coord-e
 
 ---
@@ -59,7 +56,7 @@ import { CodeSurfer } from "mdx-deck-code-surfer"
 
 ## `Result`がすごい!!
 
-エラーは例外で返すものだと思っていた(Python脳)ので、衝撃
+エラーは例外で返すものだと思っていたので、衝撃(Python脳)
 
 例外がなくても案外やっていける
 
@@ -124,8 +121,8 @@ import { CodeSurfer } from "mdx-deck-code-surfer"
 
 ## `cargo`が最強
 
-- 今まで`make`や`cmake`で消耗していたのが、圧倒的に楽に
-- `build.rs`を作って、ビルド時にコード生成とかも楽勝
+- 今まで`cmake`とかで消耗していたのが圧倒的に楽に
+- `build.rs`で、ビルド時にコード生成も楽勝
 - というかパッケージ管理がある時点で素敵✨
 
 ---
@@ -181,6 +178,8 @@ import { CodeSurfer } from "mdx-deck-code-surfer"
 ---
 
 ## `Enum`と`match`
+
+ASTが、`enum`で簡単に表現できる!
 
 ```rust
 enum Expression {
