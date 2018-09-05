@@ -113,7 +113,7 @@ enum Expression {
 ## `Enum`と`match`
 
 ```rust
-fn eval(expr) -> i64 {
+fn eval(expr: Expression) -> i64 {
   match expr {
     Number(n) => n,
     Boolean(tf) => tf as i64,
