@@ -1,38 +1,5 @@
+# Rustで言語処理系を書くと楽しい
 
-# mdx-deck basic template
+などと言いながら、基本的にRustの好きなところを垂れ流すスライドです😢
 
-This was generated with [mdx-deck][]'s `npm init deck` command.
-
-## Development
-
-To run the presentation deck in development mode:
-
-```sh
-npm start
-```
-
-Edit the [`deck.mdx`](deck.mdx) file to get started.
-
-## Exporting
-
-To build the presentation deck as static HTML:
-
-```sh
-npm run build
-```
-
-To export a PDF:
-
-```sh
-npm run pdf
-```
-
-To export an image of the title slide:
-
-```sh
-npm run image
-```
-
-For more documentation see the [mdx-deck][] repo.
-
-[mdx-deck]: https://github.com/jxnblk/mdx-deck
+[Rust入門者の集い](https://rust.connpass.com/event/92821/)で発表しました
