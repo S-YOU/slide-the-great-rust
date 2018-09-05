@@ -1,6 +1,6 @@
 import { Head, Appear } from 'mdx-deck'
-
 export { future as theme } from 'mdx-deck/themes'
+import { CodeSurfer } from "mdx-deck-code-surfer"
 
 <Head>
   <title>Rustで言語処理系を書くと楽しい</title>
@@ -63,10 +63,19 @@ export { future as theme } from 'mdx-deck/themes'
 
 例外がなくても案外やっていける
 
-```rust
-items.map(|v| may_fail(v))
-     .collect::<Result<Vec<_>, _>>()
-```
+---
+
+<CodeSurfer
+  title="`Result`がすごい!"
+  code={require("!raw-loader!./result.rs")}
+  lang="rust"
+  showNumbers={false}
+  dark={false}
+  steps={[
+    { lines: [1] },
+    { lines: [2] },
+  ]}
+/>
 
 ---
 
